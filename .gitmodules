@@ -1,0 +1,4 @@
+[submodule "docs/cosmobewi-shared"]
+	path = docs/cosmobewi-shared
+	url = https://github.com/cosmobewi/cosmobewi-sphinx-shared.git
+	branch = main
