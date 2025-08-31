@@ -21,6 +21,3 @@ extensions = [
 bibtex_bibfiles = ['refs.bib']
 
 exclude_patterns = []
-
-# -- Options for HTML output -------------------------------------------------
-html_theme = 'alabaster'
