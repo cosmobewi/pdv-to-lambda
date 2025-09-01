@@ -12,12 +12,13 @@ Cette note explore un scénario où la constante cosmologique
 La structure de la documentation est la suivante :
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Sommaire
 
    introduction
    loi_dilution
    conversion_pdV
+   demonstration_pdV
    ordres_de_grandeur
    dynamique_Q
    confrontation_lambda

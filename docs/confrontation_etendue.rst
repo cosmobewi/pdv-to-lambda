@@ -1,24 +1,31 @@
-
 .. _annexe_confrontation_etendue:
 
 =========================================================
 Annexe — Confrontation aux cadres existants (étendue)
 =========================================================
 
-**Motivation** : :math:`\eta(a)\propto a^3` = pondération par volume comobile
-dans l’intégrale :math:`d\rho_\Lambda/d\ln a=\eta(a)\rho_r` ⇒
-:math:`\Omega_{\Lambda0}\simeq \eta_0\Omega_{r0}z_\star`.
+Motivation et normalisation
+---------------------------
 
-Activation par la courbure : :math:`R\approx 0` (ère radiative) → :math:`R\neq 0`
-après égalité : possible couplage effectif :math:`R F^2/M^2`.
+- **Pondération comobile** : avec :math:`\eta(a)\propto a^3` et 
+  :math:`d\rho_\Lambda/d\ln a=\eta(a)\rho_r`, on obtient naturellement
+  :math:`\Omega_{\Lambda0}\simeq \eta_0\,\Omega_{r0}\,z_\star` (loi linéaire).
+- **Activation géométrique (heuristique)** : :math:`R\simeq 0` en ère radiative,
+  puis :math:`R\neq 0` après égalité ; on peut envisager un couplage effectif
+  de type :math:`R\,F^2/M^2` comme motivation phénoménologique d’une fenêtre tardive.
 
-Cadres comparés : Λ constant, QFT/EFT, Running Vacuum, IDE/viscosité,
-unimodulaire/sequestering, quintessence. Notre scénario = **IDE spécifique au
-rayonnement**, matière conservée.
+Panorama succinct des cadres
+----------------------------
 
-Signatures testables clés :
-- Corrélation attendue :math:`\Omega_{\Lambda0}\propto \Omega_{r0}` (donc :math:`N_{\rm eff}`).
-- *Phantom dip* local de :math:`w(z)` près de :math:`z_\star` (faible amplitude).
-- Courbure douce de :math:`H(z)` si activation tardive (1≲z≲2).
+- Λ constant ; QFT/EFT (vide quantique) ; Running Vacuum ; IDE / viscosité ;
+  unimodulaire / sequestering ; quintessence.  
+  Notre scénario : **IDE spécifique au rayonnement**, matière conservée au fond.
 
-Voir :ref:`confrontation_lambda` pour les formules ; bibliographie en annexe.
+Signatures testables clés
+-------------------------
+
+- **Relation** :math:`\Omega_{\Lambda0}\propto \Omega_{r0}` (donc dépendance à :math:`N_{\rm eff}`).
+- **Dip local** de :math:`w(z)` vers :math:`-1` près de :math:`z_\star` (faible amplitude).
+- **Courbure douce** de :math:`H(z)` si activation tardive (:math:`1\lesssim z\lesssim 2`).
+
+Voir :ref:`confrontation_lambda` pour les équations de base ; bibliographie en annexe.
