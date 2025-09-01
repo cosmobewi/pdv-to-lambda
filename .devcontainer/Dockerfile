@@ -6,23 +6,36 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 # System deps
 RUN apt-get update && apt-get install -y \
-    git wget curl ca-certificates cmake pkg-config \
+    gfortran make git wget curl build-essential ca-certificates cmake pkg-config \
     python3-dev \
+    libcfitsio-dev \
+    libfftw3-dev \
+    libopenblas-dev liblapack-dev \
+    gnuplot \
     && rm -rf /var/lib/apt/lists/*
 
-# --- External tools in /opt (hors workspace monté par VS Code) ---
-
-
-# On place le patch dans /opt (il sera appliqué en postCreate pour éviter les collisions avec le bind-mount)
-# Si ton patch est dans le repo local, VS Code le montera en /workspaces/<repo>/interacting_vacuum.diff
-# et on l’utilisera depuis le postCreateCommand côté devcontainer.json (recommandé).
-# Sinon, pour avoir un patch "baked-in" dans l'image, décommente la ligne COPY suivante et ajuste le chemin :
-# COPY interacting_vacuum.diff /opt/interacting_vacuum.diff
 
 RUN pip install --upgrade pip
 
+RUN pip install numpy scipy matplotlib getdist cobaya jupyter ipykernel setuptools wheel mpi4py
+
+RUN export COBAYA_PACKAGES_PATH=/opt/cobaya_pkgs && \
+    cobaya-install -p /opt/cobaya_pkgs \
+    planck_2018_lowl.TT planck_2018_lowl.EE \
+    planck_2018_highl_plik.TTTEEE_lite_native \
+    planck_2018_lensing.native \
+    bao.sdss_dr12_consensus_final \
+    sn.pantheon
+
+    
 # Python sphinx deps
 RUN pip install sphinx sphinx-rtd-theme sphinxcontrib-bibtex myst-parser sphinx-autobuild sphinxcontrib-mermaid sphinxcontrib-datatemplates pyyaml --root-user-action=ignore
+
+# Class Clone repo
+RUN git clone https://github.com/lesgourg/class_public.git /opt/class_public 
+
+# Python Class install
+RUN python -m pip install /opt/class_public
 
 # Dossier de travail par défaut = racine des workspaces
 WORKDIR /workspace
