@@ -18,6 +18,7 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinxcontrib.bibtex',
 ]
-bibtex_bibfiles = ['refs.bib']
+BASE = Path(__file__).resolve().parent
+bibtex_bibfiles = [str(BASE / 'refs.bib')]
 
 exclude_patterns = []
